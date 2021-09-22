@@ -1,14 +1,16 @@
 <section class="text-center container">
   <div class="row ">
-    <div class="col-lg-6 mx-auto">
+    <div class="col-lg-5 mx-auto">
       <%= image_tag 'otono.jpg', size: '150x100' %>
-      <h1 class="fw-light">褒めて遣わす</h1>
-      <div class="lead text-muted">
-        <p>ルール①　あなたの褒める語彙力を魅せてください。</p>
-        <p>ルール②　なるべく長い文章で褒めて見てください。</p>
+      <h1 class="mb-3">褒めて遣わす</h1>
+      <div class="text-muted">
+        <p>あなたの褒める力は如何ほどか？<br>出てくるお題に対して、とにかく褒めちぎり倒して下さい。<br>時間制限は無いけど瞬発力も意識すると良いです。</p>
       </div>
-      <p>↓早速やってみる↓</p>
-      <a href="#" class="btn btn-primary my-2">褒めて遣わす</a>
+      <div class="mb-1">
+        <label class="lead form-label">↓早速やってみる↓</label>
+        <input class="form-control text-center" placeholder="ニックネームを入力してスタート">
+      </div>
+      <%= link_to 'スタート', challenge_path, class: "btn btn-primary my-3" %>
     </div>
   </div>
 </section>
@@ -18,7 +20,7 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col">
         <div class="card shadow-sm">
-          <%= link_to image_tag("sample.jpg", class: 'card-img-top', size: '400x300'), "#" %>
+          <%= link_to image_tag("sample.jpg", class: 'card-img-top', size: '400x300'), show_path %>
         </div>
       </div>
       <div class="col">

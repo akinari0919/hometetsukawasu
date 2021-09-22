@@ -1,5 +1,7 @@
 class BoardsController < ApplicationController
   def index; end
 
-  def boards; end
+  def show; end
+
+  def challenge; end
 end
