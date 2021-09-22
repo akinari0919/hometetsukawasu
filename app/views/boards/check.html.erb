@@ -3,14 +3,15 @@
     <div class="col-lg-5 mx-auto">
       <div class="col my-5">
         <div class="card shadow-sm">
-          <%= link_to image_tag("sample.jpg", class: 'card-img-top', size: '400x300'), show_path %>
+          <%= link_to image_tag("sample.jpg", class: 'border border-warning border-5 shadow bg-white rounded card-img-top', size: '400x300'), show_path %>
         </div>
       </div>
       <div class="mb-3">
         <label class="lead form-label">入力確認</label>
         <textarea class="form-control" rows="3"></textarea>
       </div>
-      <%= link_to 'これで良し！', index_path, class: "btn btn-warning my-3" %>
+      <%= link_to 'これで良し！', show_path, class: "btn btn-warning my-3" %>
+      <%= link_to 'やり直す', challenge_path, class: "btn btn-secondary ms-5" %>
     </div>
   </div>
 </section>
