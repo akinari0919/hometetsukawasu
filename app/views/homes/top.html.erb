@@ -1,0 +1,16 @@
+<section class="text-center container">
+  <div class="row">
+    <div class="col-lg-5 mx-auto">
+      <%= image_tag 'otono.jpg', size: '150x100' %>
+      <h1 class="mb-3">褒めて遣わす</h1>
+      <div class="text-muted">
+        <p>あなたの褒める力は如何ほどか？<br>出てくるお題に対して、とにかく褒めちぎり倒して下さい。<br>時間制限は無いけど瞬発力も意識すると良いです。</p>
+      </div>
+      <div class="mb-1">
+        <label class="lead form-label">↓早速やってみる↓</label>
+        <input class="form-control text-center" placeholder="ニックネームを入力">
+      </div>
+      <%= link_to 'チャレンジ', challenge_path, class: "btn btn-warning my-3" %>
+    </div>
+  </div>
+</section>

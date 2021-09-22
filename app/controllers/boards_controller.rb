@@ -4,4 +4,6 @@ class BoardsController < ApplicationController
   def show; end
 
   def challenge; end
+
+  def check; end
 end
