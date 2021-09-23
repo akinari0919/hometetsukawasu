@@ -17,7 +17,9 @@ class BoardsController < ApplicationController
     @board = Board.all
   end
 
-  def show; end
+  def show
+    @board = Board.find(params[:id])
+  end
 
   def challenge; end
 
