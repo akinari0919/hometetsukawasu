@@ -10,7 +10,10 @@
         <% @board.each do |b| %>
           <div class="col">
             <div class="card shadow-sm">
-                <%= link_to image_tag(b.image.url, class: 'shadow bg-white rounded card-img-top', size: '400x300'), board_path(b) %>
+              <%= link_to board_path(b), method: :delete do %>
+                <button type="button" class="btn-close" aria-label="Close"></button>
+              <% end %>
+              <%= link_to image_tag(b.image.url, class: 'shadow bg-white rounded card-img-top', size: '400x300'), board_path(b) %>
             </div>
           </div>
         <% end %>

@@ -7,7 +7,7 @@ class BoardsController < ApplicationController
   def create
     @board = Board.new(board_params)
     if @board.save
-      redirect_to index_path
+      redirect_to boards_path
     else
       render :new
     end
@@ -15,6 +15,12 @@ class BoardsController < ApplicationController
   
   def index
     @board = Board.all
+  end
+
+  def destroy
+    @board = Board.find(params[:id])
+    @board.destroy!
+    redirect_to boards_path
   end
 
   def show
