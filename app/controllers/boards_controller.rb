@@ -1,9 +1,17 @@
 class BoardsController < ApplicationController
   
-  def new; end
+  def new
+    @board = Board.new
+  end
 
   def create
-    redirect_to index_path
+    @board = Board.new(board_params)
+    if @board.save
+      binding.pry
+      redirect_to index_path
+    else
+      render :new
+    end
   end
   
   def index; end
@@ -13,4 +21,10 @@ class BoardsController < ApplicationController
   def challenge; end
 
   def check; end
+
+  private
+
+  def board_params
+    params.require(:board).permit(:image)
+  end 
 end
