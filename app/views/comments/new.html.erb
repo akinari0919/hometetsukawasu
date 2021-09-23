@@ -1,0 +1,18 @@
+<section class="text-center container">
+  <div class="row ">
+    <div class="col-lg-5 mx-auto">
+      <div class="col my-5">
+        <div class="card shadow-sm">
+          <%= link_to image_tag(@board.image, class: 'shadow bg-white rounded card-img-top', size: '400x300') %>
+        </div>
+      </div>
+      <%= form_with model: @comment, url: board_comments_path(@board), local: true do |f| %>
+        <div class="mb-3"> 
+          <label class="lead form-label">褒めて遣わせ！</label>
+          <%= f.text_area :body, class:"form-control", rows:"3" %>
+        </div>
+        <%= f.submit '完了', class: "btn btn-warning my-3" %>
+      <% end %>
+    </div>
+  </div>
+</section>

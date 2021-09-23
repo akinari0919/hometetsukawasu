@@ -1,3 +1,5 @@
 class HomesController < ApplicationController
-  def top; end
+  def top
+    @board = Board.order("RANDOM()").first
+  end
 end

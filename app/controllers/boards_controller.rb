@@ -6,11 +6,8 @@ class BoardsController < ApplicationController
 
   def create
     @board = Board.new(board_params)
-    if @board.save
-      redirect_to boards_path
-    else
-      render :new
-    end
+    @board.save
+    redirect_to boards_path
   end
   
   def index
@@ -27,9 +24,9 @@ class BoardsController < ApplicationController
     @board = Board.find(params[:id])
   end
 
-  def challenge; end
-
-  def check; end
+  def check
+    @board = Board.find(params[:id])
+  end
 
   private
 
