@@ -7,14 +7,15 @@ class BoardsController < ApplicationController
   def create
     @board = Board.new(board_params)
     if @board.save
-      binding.pry
       redirect_to index_path
     else
       render :new
     end
   end
   
-  def index; end
+  def index
+    @board = Board.all
+  end
 
   def show; end
 
