@@ -18,10 +18,4 @@ class BoardsController < ApplicationController
   def check
     @board = Board.find(params[:id])
   end
-
-  private
-
-  def board_params
-    params.require(:board).permit(:image)
-  end
 end

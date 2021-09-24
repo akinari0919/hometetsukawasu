@@ -11,4 +11,9 @@ class Admin::BoardsController < ApplicationController
     redirect_to boards_path
   end
 
+  private
+
+  def board_params
+    params.require(:board).permit(:image)
+  end
 end
