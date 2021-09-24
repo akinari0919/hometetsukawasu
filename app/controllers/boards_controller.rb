@@ -6,8 +6,11 @@ class BoardsController < ApplicationController
 
   def create
     @board = Board.new(board_params)
-    @board.save
-    redirect_to boards_path
+    if @board.save
+      redirect_to boards_path
+    else
+      render :new
+    end
   end
   
   def index
@@ -33,5 +36,5 @@ class BoardsController < ApplicationController
 
   def board_params
     params.require(:board).permit(:image)
-  end 
+  end
 end
