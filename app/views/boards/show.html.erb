@@ -5,20 +5,17 @@
   <div class="row">
 
     <div class="scroll col-md-7 order-md-2">
-      <h3 class="text-muted">ニックネーム：○○</h3>
-      <p class="lead">その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。</p>
-      <hr class="featurette-divider">
-      <h3 class="text-muted">ニックネーム：○○</h3>
-      <p class="lead">その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。</p>
-      <hr class="featurette-divider">
-      <h3 class="text-muted">ニックネーム：○○</h3>
-      <p class="lead">その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。</p>
-      <hr class="featurette-divider">
-      <h3 class="text-muted">ニックネーム：○○</h3>
-      <p class="lead">その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。</p>
-      <hr class="featurette-divider">
-      <h3 class="text-muted">ニックネーム：○○</h3>
-      <p class="lead">その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。</p>
+      <% @comments.each do |c| %>
+        <%= link_to comment_path(c), method: :delete do %>
+          <button type="button" class="btn-close" aria-label="Close"></button>
+        <% end %>
+        <h3 class="text-muted ">
+          <i class="far fa-user-circle"></i>
+          <%= c.name %>
+        </h3>
+        <p class="lead"><%= c.body %></p>
+        <hr class="featurette-divider">
+      <% end %>
     </div>
 
     <div class="col-md-5 order-md-1">

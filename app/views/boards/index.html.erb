@@ -7,7 +7,7 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
 
         <!-- お題写真 -->
-        <% @board.each do |b| %>
+        <% @boards.each do |b| %>
           <div class="col">
             <div class="card shadow-sm">
               <%= link_to board_path(b), method: :delete do %>

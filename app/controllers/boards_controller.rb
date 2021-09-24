@@ -11,7 +11,7 @@ class BoardsController < ApplicationController
   end
   
   def index
-    @board = Board.all
+    @boards = Board.all
   end
 
   def destroy
@@ -22,6 +22,7 @@ class BoardsController < ApplicationController
 
   def show
     @board = Board.find(params[:id])
+    @comments = @board.comments.order(created_at: :desc)
   end
 
   def check

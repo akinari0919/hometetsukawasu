@@ -2,5 +2,5 @@ class Board < ApplicationRecord
   validates :image, presence: true    #空の投稿を防ぐ
   mount_uploader :image, ImageUploader
 
-  has_many :comments
+  has_many :comments, dependent: :destroy
 end

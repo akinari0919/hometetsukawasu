@@ -11,12 +11,14 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-
+    @comment = Comment.find(params[:id])
+    @comment.destroy!
+    redirect_to board_path(@comment.board_id)
   end
 
   private
 
   def comment_params
-    params.require(:comment).permit(:body).merge(board_id: params[:board_id])
+    params.require(:comment).permit(:body, :name).merge(board_id: params[:board_id])
   end 
 end

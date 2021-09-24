@@ -1,4 +1,4 @@
-<section class="text-center container">
+<div class="text-center container">
   <div class="row ">
     <div class="col-lg-5 mx-auto">
       <div class="col my-5">
@@ -6,13 +6,41 @@
           <%= link_to image_tag(@board.image, class: 'shadow bg-white rounded card-img-top', size: '400x300') %>
         </div>
       </div>
+
       <%= form_with model: @comment, url: board_comments_path(@board), local: true do |f| %>
         <div class="mb-3"> 
           <label class="lead form-label">褒めて遣わせ！</label>
           <%= f.text_area :body, class:"form-control", rows:"3" %>
         </div>
-        <%= f.submit '完了', class: "btn btn-warning my-3" %>
+        <a class="btn btn-warning mt-1" data-toggle="modal" data-target="#testModal">確認</a>
+        <div class="mt-5">
+          <%= link_to 'TOPに戻る', root_path, class: "btn btn-outline-secondary" %>
+        </div>
+        
+        <!-- モーダル画面 -->
+        <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <p>登録しますか？</p>
+              </div>
+              <div class="modal-footer">
+                <%= f.text_field :name, class:"form-control", placeholder:"公開用ニックネーム(必須)を入力して登録" %>
+                <%= f.submit '登録する', class:"btn btn-warning" %>
+                <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
       <% end %>
     </div>
   </div>
-</section>
+</div>
+
+        <!-- モーダルを開くボタン・リンク -->
+        
+    
+        
+        
