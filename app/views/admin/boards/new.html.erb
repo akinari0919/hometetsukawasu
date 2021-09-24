@@ -1,6 +1,7 @@
 <div class="text-center container mt-5">
   <div class="row">
-    <div class="col-lg-5 mx-auto">
+    <div class="col-lg-5 mx-auto mb-5">
+
       <%= form_with model: @board, local: true do |f| %>
         <div class="form-group mb-5">
           <div class="mb-5">
@@ -10,6 +11,11 @@
         </div>
         <%= f.submit '登録', class: 'btn btn-warning' %>
       <% end %>
+
+      <div class="mt-5">
+        <%= link_to 'ログアウト', admin_logout_path, method: :delete, class: 'btn btn-outline-secondary' %>
+      </div>
+
     </div>
   </div>
 </div>
