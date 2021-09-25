@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    attributes:
+      comment:
+        name: "ニックネーム"
+        body: "コメント"
+  errors:
+    messages:
+      blank: を入力してください

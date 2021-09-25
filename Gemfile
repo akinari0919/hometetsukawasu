@@ -40,3 +40,4 @@ gem 'font-awesome-sass', '~> 5.12.0'
 gem 'pry-rails'   # bindng.pryが使える
 gem 'carrierwave'   # 画像アップロード機能
 gem 'sorcery'   # ログイン機能の実装
+gem 'rails-i18n'
