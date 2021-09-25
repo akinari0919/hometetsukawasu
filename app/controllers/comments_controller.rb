@@ -6,8 +6,9 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    @comment.save
-    redirect_to board_path(@comment.board_id)
+    if @comment.save
+      redirect_to board_path(@comment.board_id), success: "登録ありがとうございます！"
+    end
   end
 
   def destroy
