@@ -15,9 +15,17 @@
                   <button type="button" class="btn-close" aria-label="Close"></button>
                 <% end %>
               <% end %>
-              <%= link_to board_path(b) do %>
-                <p><%= b.body %></p>
-                <p><%= b.job %><%= b.age %></p>
+              <%= link_to board_path(b), class:"list" do %>
+                <div class="col text-center text-white">
+                  <div class="card shadow-sm bg-secondary">
+                    <div class="h2 mt-5">
+                      <p><%= b.body %></p>
+                    </div>
+                    <div class="lead mt-3">
+                      <p><%= b.age %>代 <%= b.job %> </p>
+                    </div>
+                  </div>
+                </div>
               <% end %>
             </div>
           </div>

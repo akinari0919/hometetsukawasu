@@ -21,8 +21,16 @@
     </div>
 
     <div class="col-md-5 order-md-1">
-      <p><%= @board.body %></p>
-      <p><%= @board.job %><%= @board.age %></p>
+      <div class="col text-center text-white">
+        <div class="card shadow-sm bg-secondary">
+          <div class="h2 mt-5">
+            <p><%= @board.body %></p>
+          </div>
+          <div class="lead mt-3">
+            <p><%= @board.age %>代 <%= @board.job %> </p>
+          </div>
+        </div>
+      </div>
     </div>
     
   </div>
