@@ -3,7 +3,8 @@
     <div class="col-lg-5 mx-auto">
       <div class="col mt-5">
         <div class="card shadow-sm">
-          <%= link_to image_tag(@board.image, class: 'shadow bg-white rounded card-img-top', size: '400x300') %>
+          <p><%= @board.body %></p>
+          <p><%= @board.job %><%= @board.age %></p>
         </div>
       </div>
 

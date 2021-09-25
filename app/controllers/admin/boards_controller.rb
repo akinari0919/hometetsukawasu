@@ -14,6 +14,6 @@ class Admin::BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:image)
+    params.require(:board).permit(:body, :job, :age)
   end
 end

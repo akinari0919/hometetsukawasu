@@ -5,9 +5,11 @@
       <%= form_with model: @board, url:admin_boards_path, local: true do |f| %>
         <div class="form-group mb-5">
           <div class="mb-5">
-            <%= image_tag 'sample.jpg', size: '300x200', id: 'preview_img' %>
+            <%= image_tag 'otono.jpg', size: '250x150' %>
           </div>
-          <%= f.file_field :image, class: 'form-control', accept: 'image/*' %>
+          <%= f.text_area :body, class: 'form-control' %>
+          <%= f.text_field :job, class: 'form-control' %>
+          <%= f.text_field :age, class: 'form-control' %>
         </div>
         <%= f.submit '登録', class: 'btn btn-warning' %>
       <% end %>

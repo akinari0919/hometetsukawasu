@@ -15,7 +15,10 @@
                   <button type="button" class="btn-close" aria-label="Close"></button>
                 <% end %>
               <% end %>
-              <%= link_to image_tag(b.image.url, class: 'shadow bg-white rounded card-img-top', size: '400x300'), board_path(b) %>
+              <%= link_to board_path(b) do %>
+                <p><%= b.body %></p>
+                <p><%= b.job %><%= b.age %></p>
+              <% end %>
             </div>
           </div>
         <% end %>
