@@ -7,9 +7,9 @@
           <div class="mb-5">
             <%= image_tag 'otono.jpg', size: '250x150' %>
           </div>
-          <%= f.text_area :body, class: 'form-control' %>
-          <%= f.text_field :job, class: 'form-control' %>
-          <%= f.text_field :age, class: 'form-control' %>
+          <%= f.text_area :body, class: 'form-control', placeholder:"お題" %>
+          <%= f.text_field :job, class: 'form-control', placeholder:"職業" %>
+          <%= f.text_field :age, class: 'form-control', placeholder:"年代" %>
         </div>
         <%= f.submit '登録', class: 'btn btn-warning' %>
       <% end %>

@@ -1,11 +1,16 @@
 <div class="container">
 
+  <div class="lead mt-3">
+    <p>お題をクリックしたらコメントが見れます。</p>
+  </div>
+
   <hr class="featurette-divider">
 
-  <div class="scroll">
+  <div class="board-scroll">
     <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
-
+      
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        
         <!-- お題写真 -->
         <% @boards.each do |b| %>
           <div class="col">
