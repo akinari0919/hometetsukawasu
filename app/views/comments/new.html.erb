@@ -15,7 +15,7 @@
       <%= form_with model: @comment, url: board_comments_path(@board) do |f| %>
         <div class="mt-5"> 
           <label class="lead form-label">褒めて下さい</label>
-          <%= f.text_area :body, class:"form-control", rows:"3" %>
+          <%= f.text_area :body, class:"form-control", rows:"3", placeholder:"（例）素敵！真似できない！" %>
         </div>
         <a class="btn btn-warning mt-4" data-toggle="modal" data-target="#testModal">確認</a>
         <div class="mt-5">
