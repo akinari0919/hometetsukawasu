@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :boards, only: %w[index show destroy] do
     resources :comments, only: %w[new create destroy], shallow: true
   end
+  resources :comments, only: %w[index]
 end

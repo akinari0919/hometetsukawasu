@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div class="comment-scroll mt-4">
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th style="width: 40%">お題</th>
+          <th style="width: 5%"></th>
+          <th style="width: 10%"></th>
+          <th style="width: 35%">コメント</th>
+          <th style="width: 10%">投稿者</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @comments.each do |c| %>
+          <tr>
+            <td><%= @boards.find(c.board_id).body %></td>
+            <td><%= @boards.find(c.board_id).age %>代</td>
+            <td><%= @boards.find(c.board_id).job %></td>
+            <td><%= c.body %></td>
+            <td><i class="far fa-user-circle"></i><%= c.name %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

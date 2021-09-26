@@ -11,6 +11,11 @@ class CommentsController < ApplicationController
     end
   end
 
+  def index
+    @boards = Board.all
+    @comments = Comment.all.order(created_at: :desc)
+  end
+
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy!

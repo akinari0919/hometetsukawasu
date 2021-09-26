@@ -8,6 +8,16 @@
   overflow: auto;
 }
 
+.comment-scroll{
+  height: 584px;
+  overflow: auto;
+}
+
+.table th{
+	position: sticky;
+	top: 0;
+}
+
 .list{
   text-decoration: none;
 }
