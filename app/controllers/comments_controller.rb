@@ -22,6 +22,11 @@ class CommentsController < ApplicationController
     redirect_to board_path(@comment.board_id)
   end
 
+  def renew
+    @board = Board.order("RANDOM()").first
+    redirect_to new_board_comment_path(@board)
+  end
+
   private
 
   def comment_params

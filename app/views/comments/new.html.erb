@@ -18,7 +18,11 @@
           <%= f.text_area :body, class:"form-control", rows:"3", placeholder:"（例）素敵！真似できない！" %>
         </div>
         <a class="btn btn-warning mt-4" data-toggle="modal" data-target="#testModal">確認</a>
+        
         <div class="mt-5">
+          <%= link_to '別のお題にする', renew_path, class: "btn btn-outline-secondary", method: :post %>
+        </div>
+        <div class="mt-2">
           <%= link_to 'TOPに戻る', root_path, class: "btn btn-outline-secondary" %>
         </div>
         

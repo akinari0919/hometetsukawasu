@@ -11,4 +11,5 @@ Rails.application.routes.draw do
     resources :comments, only: %w[new create destroy], shallow: true
   end
   resources :comments, only: %w[index]
+  post 'renew', to: 'comments#renew'
 end
