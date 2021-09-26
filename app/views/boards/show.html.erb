@@ -7,6 +7,19 @@
 
   <div class="row">
 
+    <div class="col-md-5 order-md-1">
+      <div class="col text-center text-white">
+        <div class="card shadow-sm bg-secondary">
+          <div class="h2 mt-5">
+            <p><%= @board.body %></p>
+          </div>
+          <div class="lead mt-3">
+            <p><%= @board.age %>代 <%= @board.job %> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="scroll col-md-7 order-md-2">
       <% if @comments.present? %>
         <% @comments.each do |c| %>
@@ -25,19 +38,6 @@
       <% else %>
         <p>未だ投稿がありません</p>
       <% end %>
-    </div>
-
-    <div class="col-md-5 order-md-1">
-      <div class="col text-center text-white">
-        <div class="card shadow-sm bg-secondary">
-          <div class="h2 mt-5">
-            <p><%= @board.body %></p>
-          </div>
-          <div class="lead mt-3">
-            <p><%= @board.age %>代 <%= @board.job %> </p>
-          </div>
-        </div>
-      </div>
     </div>
     
   </div>
