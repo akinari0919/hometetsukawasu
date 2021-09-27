@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   root 'homes#top'
-  resources :boards, only: %w[index show destroy] do
+  resources :boards, only: %w[index create show destroy] do
     resources :comments, only: %w[new create destroy], shallow: true
   end
   resources :comments, only: %w[index]
