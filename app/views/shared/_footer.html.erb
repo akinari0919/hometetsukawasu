@@ -1,6 +1,10 @@
 <footer class="text-muted py-5">
   <div class="container">
-    <%= link_to 'new', admin_login_path, class:"text-white" %>
+    <% if logged_in? %>
+      <%= link_to 'new', new_admin_board_path, class:"text-white" %>
+    <% else %>
+      <%= link_to 'new', admin_login_path, class:"text-white" %>
+    <% end %>
     <p class="float-end">
       <a href="#">上まで戻る</a>
     </p>
