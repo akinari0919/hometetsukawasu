@@ -26,3 +26,5 @@
 /public/uploads/
 
 /db/seeds.rb
+
+/vendor/bundle
